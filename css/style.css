@@ -16,3 +16,44 @@ body {
     border: 1px solid black;
     font-size: 30px;
 }
+.header-item {
+    grid-area: header;
+}
+.menu-item {
+    grid-area: menu;
+}
+.main-item {
+    grid-area: main;
+}
+.sidebar-item {
+    grid-area: sidebar;
+}
+.footer-item {
+    grid-area: footer;
+}
+.grid-container-2 {
+    display: grid;
+    grid-template-areas: 
+    'header header header header header header'
+    'menu main main main sidebar sidebar'
+    'menu footer footer footer footer footer';
+    grid-gap: 10px;
+    background-color: #2196f3;
+    padding: 10px;
+}
+.grid-container-2 > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 1;
+    font-size: 30px;
+}
+@media screen and (max-width: 768px) {
+    .grid-container-2 {
+        grid-template-areas:
+        'header'
+        'menu'
+        'main'
+        'sidebar'
+        'footer';
+    }
+}
